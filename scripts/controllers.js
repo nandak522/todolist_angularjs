@@ -13,7 +13,7 @@ angular.module('todolistApp')
     };
 
   }])
-  .controller('addItemController', ['$scope', 'TodoItemsService', function($scope, TodoItemsService){
+  .controller('addItemController', ['TodoItemsService', function(TodoItemsService){
     var self = this;
 
     self.addItem = function () {

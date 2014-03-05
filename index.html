@@ -10,9 +10,11 @@
       <input type="checkbox" value="{{$index}}" ng-model="item.done"/><span ng-class="lstctrl.getItemStatus($index)">{{ item.task }}</span>&nbsp;&nbsp;<span class="red" ng-click="lstctrl.deleteItem($index)">X</span>
       </div>
     </div>
+    <br/>
+    <br/>
     <div id='add_new_todo_item' ng-controller="addItemController as addCtrl">
       <form ng-submit="addCtrl.addItem()">
-        <input type="text" ng-model="addCtrl.newTodoItem" placeholder="Type the TODO item"/>
+        <input type="text" ng-model="addCtrl.newTodoItem" placeholder="Add a TODO item"/>
         <input type="submit" value="Add"/>
       </form>
     </div>

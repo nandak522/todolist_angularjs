@@ -2,14 +2,14 @@ angular.module('todolistApp')
   .factory('TodoItemsService', [function () {
 
     var todoItems = [
-      {'task': 'Learning scopes', 'done': false},
-      {'task': 'Learning services', 'done': false},
-      {'task': 'Learning providers', 'done': true}
+      {task: 'Learning scopes', done: false},
+      {task: 'Learning services', done: false},
+      {task: 'Learning providers', done: true}
     ];
 
     return {
       add: function(item){
-        todoItems.push({'task': item, 'done': false});
+        todoItems.push({task: item, done: false});
       },
       remove: function (index) {
         todoItems.splice(index, 1);
