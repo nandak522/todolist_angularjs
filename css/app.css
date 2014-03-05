@@ -1,0 +1,12 @@
+.completed{
+    color:#EEE;
+    font-weight: normal;
+}
+.not{
+    color:#000;
+    font-weight: bold;
+}
+.red{
+    color:#F00;
+    font-weight: bold;
+}

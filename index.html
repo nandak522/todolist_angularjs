@@ -1,0 +1,24 @@
+<html>
+  <head>
+    <title>Todo List</title>
+    <link rel="stylesheet" type="text/css" href="css/app.css">
+  </head>
+  <body ng-app="todolistApp">
+    <div id='todo_items' ng-controller="listController as lstctrl">
+      <h3>Todo List</h3>
+      <div ng-repeat="item in lstctrl.getTodoItems()">
+      <input type="checkbox" value="{{$index}}" ng-model="item.done"/><span ng-class="lstctrl.getItemStatus($index)">{{ item.task }}</span>&nbsp;&nbsp;<span class="red" ng-click="lstctrl.deleteItem($index)">X</span>
+      </div>
+    </div>
+    <div id='add_new_todo_item' ng-controller="addItemController as addCtrl">
+      <form ng-submit="addCtrl.addItem()">
+        <input type="text" ng-model="addCtrl.newTodoItem" placeholder="Type the TODO item"/>
+        <input type="submit" value="Add"/>
+      </form>
+    </div>
+  </body>
+  <script type="text/javascript" src="scripts/vendor/angular.js"></script>
+  <script type="text/javascript" src="scripts/app.js"></script>
+  <script type="text/javascript" src="scripts/controllers.js"></script>
+  <script type="text/javascript" src="scripts/services.js"></script>
+</html>
