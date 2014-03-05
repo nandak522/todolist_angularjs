@@ -15,7 +15,7 @@
     <div id='add_new_todo_item' ng-controller="addItemController as addCtrl">
       <form ng-submit="addCtrl.addItem()">
         <input type="text" ng-model="addCtrl.newTodoItem" placeholder="Add a TODO item"/>
-        <input type="submit" value="Add"/>
+        <input type="submit" value="Add" ng-disabled="!addCtrl.newTodoItem"/>
       </form>
     </div>
   </body>
