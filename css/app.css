@@ -9,4 +9,5 @@
 .red{
     color:#F00;
     font-weight: bold;
+    cursor: pointer;
 }
